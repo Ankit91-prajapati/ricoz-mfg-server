@@ -28,6 +28,7 @@ app.use(
   cors({
     origin: process.env.VITE_FRONTEND_URL,
     allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   })
 );
 
