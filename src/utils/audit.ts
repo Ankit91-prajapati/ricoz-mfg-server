@@ -1,5 +1,5 @@
 import { Request } from "express";
-import AuditLog, { AuditAction } from "../models/auditLog.model.js";
+import  {AuditLog , AuditAction } from "../models/auditLog.model.js";
 
 export default async function writeAudit(
   req: Request,
@@ -16,7 +16,7 @@ export default async function writeAudit(
       action,
       targetResource,
       ipAddress: req.ip,
-      metadata,
+     
     });
   } catch (e) {
     // an audit failure should never break the request
